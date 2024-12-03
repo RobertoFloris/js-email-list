@@ -1,9 +1,17 @@
 const endpoint = "https://flynn.boolean.careers/exercises/api/random/mail";
 
-axios.get(endpoint)
-.then(response =>{
+
+for(let i=0; i<10; i++){
+  getApi()
+}
+
+
+function getApi(){
+  axios.get(endpoint)
+  .then(response =>{
   console.log(response.data.response);
-})
-.catch(error => {
+  })
+  .catch(error => {
   console.log(error);
-})
+  })
+}
