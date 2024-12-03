@@ -31,7 +31,7 @@ function getApi(){
   axios.get(endpoint)
   .then(response =>{
   console.log(response.data.response);
-  mail.innerHTML+=`<li>${response.data.response}</li>`
+  mail.innerHTML+=`<li class="list-group-item d-flex justify-content-between align-items-center">${response.data.response}</li>`
   cont++;
   if(cont>9){
     mail.classList.remove("d-none");
